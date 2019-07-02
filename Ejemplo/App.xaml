@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:converters="clr-namespace:Ejemplo.Converters;assembly=Ejemplo"
+             mc:Ignorable="d" 
+             x:Class="Ejemplo.App">
+    <Application.Resources>
+        
+        <ResourceDictionary>
+            
+            <Color x:Key="DeleteItemButtonColor">Red</Color>
+            <Color x:Key="EditItemButtonColor">SandyBrown</Color>
+            
+            <Style x:Key="LabelTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="LabelDescriptionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+            
+            <Style x:Key="DeleteItemButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource DeleteItemButtonColor}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            
+            <Style x:Key="EditItemButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource EditItemButtonColor}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style x:Key="LabelFormTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+            
+             <!-- Converters -->
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+            
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>

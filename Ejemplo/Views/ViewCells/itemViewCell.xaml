@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:localization="clr-namespace:Ejemplo;assembly=Ejemplo" 
+             x:Class="Ejemplo.Views.ViewCells.ItemViewCell"
+          x:Name="Item">
+    <Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding Path=BindingContext.EnableActionsCommand, Source={x:Reference Name=Item}}" CommandParameter="{Binding .}"/>
+        </Grid.GestureRecognizers>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Text="{Binding ItemTitle}" Style="{StaticResource LabelTitleStyle}" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+        <Label Grid.Row="1" Text="{Binding Description}" Style="{StaticResource LabelDescriptionStyle}" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+        <StackLayout Grid.Row="2" IsVisible="{Binding IsVisibleActions}" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+            <Button Text="{localization:Translate EditButtonTitle}" Style="{StaticResource EditItemButtonStyle}"  Command="{Binding Path=BindingContext.EditCommand, Source={x:Reference Name=Item}}" CommandParameter="{Binding .}" HorizontalOptions="StartAndExpand"/>
+            <Button Text="{localization:Translate DeleteButtonTitle}" Style="{StaticResource DeleteItemButtonStyle}" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference Name=Item}}" CommandParameter="{Binding .}" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+    </Grid>
+</ViewCell>

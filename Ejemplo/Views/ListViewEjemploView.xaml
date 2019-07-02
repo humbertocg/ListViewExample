@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                       xmlns:local="clr-namespace:Ejemplo;assembly=Ejemplo"
+                       xmlns:localization="clr-namespace:Ejemplo;assembly=Ejemplo" 
+                       xmlns:viewcells="clr-namespace:Ejemplo.Views.ViewCells;assembly=Ejemplo" 
+                       x:Class="Ejemplo.Views.ListViewEjemploView"
+                       Title="{localization:Translate ListViewExamplePageTitle}">
+    <local:BaseContentPage.ToolbarItems>
+        <ToolbarItem Text="{localization:Translate AddItem}"
+                     Command="{Binding AddItemCommand}"/> 
+    </local:BaseContentPage.ToolbarItems>
+    <local:BaseContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                     Margin="10">
+            <ListView HorizontalOptions="FillAndExpand" x:Name="ListItems"
+                      VerticalOptions="FillAndExpand"
+                ItemsSource="{Binding ItemList}"
+                SelectedItem="{Binding SelectedItem}"
+                ItemSelected="Handle_ItemSelected"
+                HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <viewcells:ItemViewCell/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </local:BaseContentPage.Content>
+</local:BaseContentPage>

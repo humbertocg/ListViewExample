@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="DeleteButtonTitle" xml:space="preserve">
+        <value>Eliminar</value>
+    </data>
+    <data name="EditButtonTitle" xml:space="preserve">
+        <value>Editar</value>
+    </data>
+    <data name="DeleteItemTitle" xml:space="preserve">
+        <value>Eliminar Item</value>
+    </data>
+    <data name="DeleteItemMessage" xml:space="preserve">
+        <value>¿Esta seguro que desea elimiar este item?</value>
+    </data>
+    <data name="YesDialog" xml:space="preserve">
+        <value>Si</value>
+    </data>
+    <data name="NoDialog" xml:space="preserve">
+        <value>No</value>
+    </data>
+    <data name="ListViewExamplePageTitle" xml:space="preserve">
+        <value>ListView Ejemplo</value>
+    </data>
+    <data name="EditItemPageTitle" xml:space="preserve">
+        <value>Editar Item</value>
+    </data>
+    <data name="EditItemTitle" xml:space="preserve">
+        <value>Titulo</value>
+    </data>
+    <data name="EditItemDescription" xml:space="preserve">
+        <value>Descripcion</value>
+    </data>
+    <data name="EditItemTitle" xml:space="preserve">
+        <value>Editar Item</value>
+    </data>
+    <data name="EditItemMessage" xml:space="preserve">
+        <value>¿Estas seguro de editar este item?</value>
+    </data>
+    
+    <data name="CancelItemTitle" xml:space="preserve">
+        <value>Cancelar Edicion</value>
+    </data>
+    <data name="CancelItemMessage" xml:space="preserve">
+        <value>¿Estas seguro de cancelar la edicion de este item?</value>
+    </data>
+    
+     <data name="AddItemTitle" xml:space="preserve">
+        <value>Agregar item</value>
+    </data>
+    <data name="AddItemMessage" xml:space="preserve">
+        <value>¿Esta seguro de agregar este nuevo item?</value>
+    </data>
+    <data name="AddItem" xml:space="preserve">
+        <value>Agregar Item</value>
+    </data>
+</root>

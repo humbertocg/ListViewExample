@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ejemplo;assembly=Ejemplo"
+             xmlns:localization="clr-namespace:Ejemplo;assembly=Ejemplo" 
+             xmlns:controls ="clr-namespace:Ejemplo.Controls;assembly=Ejemplo"
+             x:Class="Ejemplo.Views.EditItemView"
+             Title="{localization:Translate EditItemPageTitle}">
+    <local:BaseContentPage.Triggers>
+        <DataTrigger TargetType="{x:Type local:BaseContentPage}" Binding="{Binding IsEditing}" Value="False">
+            <Setter Property="Title" Value="{localization:Translate AddItemTitle}"/>
+        </DataTrigger>
+    </local:BaseContentPage.Triggers>
+    <local:BaseContentPage.Content>
+        <StackLayout Margin="10">
+            <controls:EntryCustom Title="{localization:Translate EditItemTitle}"
+                                  Data="{Binding Item.ItemTitle}">
+                <controls:EntryCustom.Triggers>
+                    <DataTrigger TargetType="{x:Type controls:EntryCustom}" Binding="{Binding IsEditing}" Value="False">
+                        <Setter Property="Title" Value="{localization:Translate AddItemTitle}"/>
+                    </DataTrigger>
+                </controls:EntryCustom.Triggers>
+            </controls:EntryCustom>
+            <controls:EntryCustom Title="{localization:Translate EditItemDescription}"
+                                  Data="{Binding Item.Description}"/>
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Button Text="{localization:Translate EditButtonTitle}" Style="{StaticResource EditItemButtonStyle}"  Command="{Binding EditCommand}" HorizontalOptions="StartAndExpand">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsEditing}" Value="False">
+                            <Setter Property="Text" Value="{localization:Translate AddItemTitle}"/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+                <Button Text="{localization:Translate DeleteButtonTitle}" Style="{StaticResource DeleteItemButtonStyle}" Command="{Binding CancelCommand}" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </local:BaseContentPage.Content>
+</local:BaseContentPage>
